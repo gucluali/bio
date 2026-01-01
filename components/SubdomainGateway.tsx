@@ -1,7 +1,10 @@
 import React from 'react';
 import { ExternalLink, ArrowRight, Palette, Code, Camera } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const SubdomainGateway: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="projects" className="py-32 bg-slate-950 relative overflow-hidden scroll-mt-28">
       {/* Background Texture */}
@@ -10,11 +13,11 @@ const SubdomainGateway: React.FC = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-slate-800 pb-8">
           <div>
-            <h2 className="text-4xl md:text-5xl font-serif text-white mb-2">Dijital Eko-Sistem</h2>
-            <p className="text-slate-400">Projelerim ve ilgi alanlarım için özel alanlar.</p>
+            <h2 className="text-4xl md:text-5xl font-serif text-white mb-2">{t.projects.title}</h2>
+            <p className="text-slate-400">{t.projects.subtitle}</p>
           </div>
           <div className="hidden md:block text-slate-500 text-sm italic">
-            Bu ana sayfa sadece biyografi içindir.
+            {t.projects.note}
           </div>
         </div>
 
@@ -29,9 +32,9 @@ const SubdomainGateway: React.FC = () => {
               <div className="mb-4 text-gold-500 p-3 bg-white/5 backdrop-blur-sm w-fit rounded-full">
                 <Code size={24} />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Teknoloji & Yazılım</h3>
+              <h3 className="text-2xl font-bold text-white mb-2">{t.projects.tech.title}</h3>
               <p className="text-slate-400 text-sm mb-6 line-clamp-2">
-                Geliştirdiğim yazılım mimarileri, açık kaynak kodlu projeler ve teknik makalelerim.
+                {t.projects.tech.desc}
               </p>
               <div className="flex items-center text-white text-sm font-semibold tracking-wide">
                 <span>tech.aliguclu.art</span>
@@ -50,9 +53,9 @@ const SubdomainGateway: React.FC = () => {
               <div className="mb-4 text-gold-500 p-3 bg-white/5 backdrop-blur-sm w-fit rounded-full">
                 <Palette size={24} />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Sanat Galerisi</h3>
+              <h3 className="text-2xl font-bold text-white mb-2">{t.projects.gallery.title}</h3>
               <p className="text-slate-400 text-sm mb-6 line-clamp-2">
-                Küratörlüğünü yaptığım eserler, sanat eleştirilerim ve koleksiyonlarım.
+                {t.projects.gallery.desc}
               </p>
               <div className="flex items-center text-gold-400 text-sm font-semibold tracking-wide">
                 <span>gallery.aliguclu.art</span>
@@ -70,9 +73,9 @@ const SubdomainGateway: React.FC = () => {
               <div className="mb-4 text-gold-500 p-3 bg-white/5 backdrop-blur-sm w-fit rounded-full">
                 <Camera size={24} />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Basın & Medya</h3>
+              <h3 className="text-2xl font-bold text-white mb-2">{t.projects.media.title}</h3>
               <p className="text-slate-400 text-sm mb-6 line-clamp-2">
-                Röportajlar, magazin dünyasındaki yansımalar ve görsel arşiv.
+                {t.projects.media.desc}
               </p>
               <div className="flex items-center text-white text-sm font-semibold tracking-wide">
                 <span>media.aliguclu.art</span>
@@ -85,7 +88,7 @@ const SubdomainGateway: React.FC = () => {
 
         <div className="mt-16 text-center">
             <p className="text-slate-500 text-sm">
-                * Projeler bağımsız sub-domainlerde barındırılmaktadır.
+                {t.projects.footer_note}
             </p>
         </div>
       </div>

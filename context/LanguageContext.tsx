@@ -53,8 +53,18 @@ interface Translations {
     };
     quote: string;
   };
+  projects: {
+    title: string;
+    subtitle: string;
+    note: string;
+    tech: { title: string; desc: string; };
+    gallery: { title: string; desc: string; };
+    media: { title: string; desc: string; };
+    footer_note: string;
+  };
   footer: {
     rights: string;
+    contact_title: string;
   };
 }
 
@@ -108,10 +118,85 @@ const translations: Record<Language, Translations> = {
         digiturk: { role: 'Dijital Yayıncılık İş Ortağı', desc: 'Medya ve yayıncılık teknolojilerinin dijitalleşme sürecinde stratejik ortaklık.' },
         public: { role: 'Stratejik Danışman', desc: 'Devlet kurumlarının dijital dönüşüm vizyonuna katkı sağlayan projeler.' }
       },
-      quote: '"Leadership is action, not position."'
+      quote: '"Liderlik bir unvan değil, bir eylemdir."'
+    },
+    projects: {
+      title: 'Dijital Eko-Sistem',
+      subtitle: 'Projelerim ve ilgi alanlarım için özel alanlar.',
+      note: 'Bu ana sayfa sadece biyografi içindir.',
+      tech: { title: 'Teknoloji & Yazılım', desc: 'Geliştirdiğim yazılım mimarileri, açık kaynak kodlu projeler ve teknik makalelerim.' },
+      gallery: { title: 'Sanat Galerisi', desc: 'Küratörlüğünü yaptığım eserler, sanat eleştirilerim ve koleksiyonlarım.' },
+      media: { title: 'Basın & Medya', desc: 'Röportajlar, magazin dünyasındaki yansımalar ve görsel arşiv.' },
+      footer_note: '* Projeler bağımsız sub-domainlerde barındırılmaktadır.'
     },
     footer: {
-      rights: 'All Rights Reserved.'
+      rights: 'Tüm Hakları Saklıdır.',
+      contact_title: 'İletişim'
+    }
+  },
+  en: {
+    navbar: {
+      about: 'ABOUT',
+      career: 'CAREER',
+      contact: 'CONTACT'
+    },
+    hero: {
+      title: 'The Intersection of Art, Innovation, and',
+      subtitle: "Ali Güçlü stands out as a multi-layered strategist in his career spanning from the 90s to the present; extending from entrepreneurship to the digital revolution, from civil society leadership to international cultural projects.",
+      cta: 'Read My Story'
+    },
+    biography: {
+      title: 'Vision Journey',
+      sections: {
+        roots: {
+          title: 'Multifaceted Entrepreneurial Foundations',
+          date: "1990s • Roots",
+          text: "The journey in the business world began with a broad vision in the dynamic structure of the 90s. While participating in production with agriculture and export (mandarin orchards) in the Aegean, experience was gained simultaneously in jewelry, automotive, and technology retail sectors. The most striking technical initiative of this period was the infrastructure work established on domestic radio station production and assembly."
+        },
+        tech: {
+          title: 'Digital Transformation and Media Integration',
+          date: "2000s • Technology",
+          text: "The 2000s are the era of 'firsts' where technology and media merged. As a Business Partner (Developer and Content Partner) within Ericsson Mobility World (2002-2008), he pioneered the meeting of mobile technologies with media in Turkey.",
+          list1: "Sectoral Firsts: Digitalization steps in media with Tatlıses Digital and İzzet Yıldızhan Show partnerships. Turkey's first interactive media program setup, first Radio SMS system, and SMS payment infrastructures.",
+          list2: "Turkcell Partnership: Developing nearly 50 value-added services (VAS) as a Business Partner for the Turkcell ecosystem; bridge projects combining GSM and media worlds, from special artist content to sports services."
+        },
+        social: {
+          title: 'Social Responsibility and Strategic Leadership',
+          date: '2003-2006 and Beyond • Society',
+          text: "Technological competence was transformed into social benefit, carrying out strategic projects as a Business Partner with the United Nations High Commissioner for Refugees (UNHCR). Muazzez Ersoy's Goodwill Ambassadorship process, awareness concerts with Group Ayna, and the 'Donation via SMS' mobile application, a first in the world, were implemented. Additionally, duties at ASAM (Association for Solidarity with Asylum Seekers and Migrants) and HASVAK Istanbul Presidency were undertaken."
+        },
+        global: {
+          title: 'Cultural Vision and Global Projects',
+          date: '2012 - Present • Global',
+          text1: "Combining local experiences with a global vision, strategic Business Partnerships were established with Digitürk. Global digital content and cultural publishing projects aimed at belief systems such as Islam, Judaism, and Christianity were developed.",
+          text2: "During the 2013 Cultural Capital of the Turkic World process, the Turkvision Song Contest was developed and implemented representing Azerbaijan Media, creating an international brand. Today; consultancy is provided as 'Art and Innovation Strategist' to holdings, technology firms, and government institutions."
+        }
+      }
+    },
+    career: {
+      title: 'Career Milestones',
+      subtitle: 'A past full of technology and leadership, extending from global giants to international organizations.',
+      items: {
+        ericsson: { role: 'Technology Business Partner', desc: 'Content and technology partnership in international telecommunication infrastructure projects.' },
+        turkcell: { role: 'Value Added Services Business Partner', desc: "Business partnership in digital services and content projects at Turkey's leading operator." },
+        unhcr: { role: 'Strategic Business Partner', desc: 'Developing humanitarian aid technologies under the United Nations umbrella and developing social projects with renowned artists.' },
+        digiturk: { role: 'Digital Broadcasting Business Partner', desc: 'Strategic partnership in the digitalization process of media and broadcasting technologies.' },
+        public: { role: 'Strategic Consultant', desc: 'Projects contributing to the digital transformation vision of government institutions.' }
+      },
+      quote: '"Leadership is action, not position."'
+    },
+    projects: {
+      title: 'Digital Eco-System',
+      subtitle: 'Special spaces for my projects and interests.',
+      note: 'This homepage is for biography only.',
+      tech: { title: 'Technology & Software', desc: 'Software architectures I developed, open source projects, and technical articles.' },
+      gallery: { title: 'Art Gallery', desc: 'Works I curated, art criticism, and collections.' },
+      media: { title: 'Press & Media', desc: 'Interviews, reflections in the magazine world, and visual archive.' },
+      footer_note: '* Projects are hosted on independent sub-domains.'
+    },
+    footer: {
+      rights: 'All Rights Reserved.',
+      contact_title: 'Contact'
     }
   }
 };

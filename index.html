@@ -85,7 +85,7 @@
       import { 
         Menu, X, ChevronDown, 
         Briefcase, Globe, Tv, Signal, Building2, 
-        ExternalLink, ArrowRight, Palette, Code, Camera
+        ExternalLink, ArrowRight, Palette, Code, Camera, Mail
       } from 'lucide-react';
 
       // --- ÇEVİRİ VE DİL YÖNETİMİ ---
@@ -142,8 +142,18 @@
             },
             quote: '"Liderlik bir unvan değil, bir eylemdir."'
           },
+          projects: {
+            title: 'Dijital Eko-Sistem',
+            subtitle: 'Projelerim ve ilgi alanlarım için özel alanlar.',
+            note: 'Bu ana sayfa sadece biyografi içindir.',
+            tech: { title: 'Teknoloji & Yazılım', desc: 'Geliştirdiğim yazılım mimarileri, açık kaynak kodlu projeler ve teknik makalelerim.' },
+            gallery: { title: 'Sanat Galerisi', desc: 'Küratörlüğünü yaptığım eserler, sanat eleştirilerim ve koleksiyonlarım.' },
+            media: { title: 'Basın & Medya', desc: 'Röportajlar, magazin dünyasındaki yansımalar ve görsel arşiv.' },
+            footer_note: '* Projeler bağımsız sub-domainlerde barındırılmaktadır.'
+          },
           footer: {
-            rights: 'Tüm Hakları Saklıdır.'
+            rights: 'Tüm Hakları Saklıdır.',
+            contact_title: 'İletişim'
           }
         },
         en: {
@@ -197,8 +207,18 @@
             },
             quote: '"Leadership is action, not position."'
           },
+          projects: {
+            title: 'Digital Eco-System',
+            subtitle: 'Special spaces for my projects and interests.',
+            note: 'This homepage is for biography only.',
+            tech: { title: 'Technology & Software', desc: 'Software architectures I developed, open source projects, and technical articles.' },
+            gallery: { title: 'Art Gallery', desc: 'Works I curated, art criticism, and collections.' },
+            media: { title: 'Press & Media', desc: 'Interviews, reflections in the magazine world, and visual archive.' },
+            footer_note: '* Projects are hosted on independent sub-domains.'
+          },
           footer: {
-            rights: 'All Rights Reserved.'
+            rights: 'All Rights Reserved.',
+            contact_title: 'Contact'
           }
         }
       };
@@ -241,7 +261,6 @@
 
         const navLinks = [
           { name: t.navbar.about, href: '#biography' },
-          { name: t.navbar.career, href: '#career' },
           { name: t.navbar.contact, href: '#footer' },
         ];
 
@@ -545,12 +564,25 @@
         const { t } = useLanguage();
 
         return (
-          <footer id="footer" className="bg-black py-12 border-t border-slate-900 scroll-mt-28">
-            <div className="container mx-auto px-6 flex justify-center items-center">
+          <footer id="footer" className="bg-black py-16 border-t border-slate-900 scroll-mt-28">
+            <div className="container mx-auto px-6">
               
-              <div className="text-center">
-                <h4 className="text-2xl font-serif font-bold text-white tracking-tighter">ALİ<span className="text-gold-500">GÜÇLÜ</span></h4>
-                <p className="text-slate-500 text-sm mt-2">© {new Date().getFullYear()} {t.footer.rights}</p>
+              <div className="flex flex-col items-center justify-center text-center space-y-6">
+                
+                <h4 className="text-3xl font-serif font-bold text-white tracking-tighter">ALİ<span className="text-gold-500">GÜÇLÜ</span></h4>
+                
+                {/* Contact Information */}
+                <div className="flex flex-col items-center space-y-2">
+                  <span className="text-gold-500 text-sm uppercase tracking-widest font-semibold">{t.footer.contact_title}</span>
+                  <a href="mailto:ali.guclu@outlook.com" className="flex items-center space-x-2 text-xl text-slate-300 hover:text-white transition-colors">
+                    <Mail size={20} />
+                    <span>ali.guclu@outlook.com</span>
+                  </a>
+                </div>
+
+                <div className="w-12 h-px bg-slate-800 my-4"></div>
+
+                <p className="text-slate-600 text-sm">© {new Date().getFullYear()} {t.footer.rights}</p>
               </div>
 
             </div>
